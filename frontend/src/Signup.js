@@ -72,7 +72,7 @@ const SignupForm = () => {
         const isValid = handleValidation(fullname,email, password);
         if (Object.keys(isValid).length === 0) {
             try {
-                const res = await axios.post("http://localhost:8000/user/register", { fullname, email, password });
+                const res = await axios.post("https://riota-login.onrender.com/user/register", { fullname, email, password });
                 navigate('/login');
             } catch (err) {
                 if (err.response && err.response.data && err.response.data.message) {

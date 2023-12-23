@@ -13,7 +13,7 @@ const Home = () => {
 
 //to fetch user specific data
 const handleFetchData = async() => {
-    const res = await axios.get("http://localhost:8000/user/getuser", { headers: {"Authorization" : `Bearer ${token}`} });
+    const res = await axios.get("https://riota-login.onrender.com/user/getuser", { headers: {"Authorization" : `Bearer ${token}`} });
     setData(res.data.user);
 }
 

@@ -49,7 +49,7 @@ const LoginForm = () => {
         const isValid = handleValidation(email,password);
         if(Object.keys(isValid).length == 0){
             try{
-                const res = await axios.post("http://localhost:8000/user/login", {email,password});
+                const res = await axios.post("https://riota-login.onrender.com/user/login", {email,password});
                 localStorage.setItem('token', res.data.token);
                 navigate('/home');        
             }
